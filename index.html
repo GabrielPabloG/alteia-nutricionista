@@ -10,21 +10,43 @@
   <meta name="keywords"
     content="nutricionista São Paulo, emagrecimento saudável, nutrição comportamental, consulta online, Dra. Alteia Semiramis" />
   <meta name="author" content="Dra. Alteia Semiramis" />
+  <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Dra. Alteia Semiramis | Nutricionista em São Paulo" />
   <meta property="og:description"
     content="Especialista em Emagrecimento Saudável e Nutrição Comportamental. Consultas presenciais e online." />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
 
-  <!-- Google Fonts: Playfair Display + Poppins -->
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Person", "LocalBusiness"],
+    "name": "Dra. Alteia Semiramis",
+    "description": "Nutricionista especializada em Emagrecimento Saudável e Nutrição Comportamental",
+    "url": "https://draalteianutricionista.com.br",
+    "telephone": "+5511992815036",
+    "email": "contato@draAlteianutricionista.com.br",
+    "image": "images/alteia.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "priceRange": "R$",
+    "knowsAbout": ["Nutrição Clínica", "Emagrecimento", "Nutrição Comportamental", "Nutrição Esportiva"],
+    "areaServed": { "@type": "Country", "name": "BR" }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
-
-  <!-- Font Awesome CDN (ícones WhatsApp etc.) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='10 -3 100 100'><text y='.9em' font-size='90'>🍎</text></svg>" />
   <link rel="stylesheet" href="style.css" />
@@ -32,14 +54,21 @@
 
 <body>
 
-  <!-- ========== HEADER FIXO ========== -->
+  <!-- Skip-to-content -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[9999] focus:bg-green focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:outline-2 focus:outline-cta focus:outline-offset-2">
+    Pular para o conteúdo principal
+  </a>
+
+  <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="header__inner container">
       <a href="#inicio" class="header__brand">
         <span class="header__brand-name"><span class="header__brand-name--color">Dra.</span> Alteia Semiramis</span>
-        <span class="header__brand-crn">CRN-3: 12345 · Nutricionista</span>
+        <span class="header__brand-crn">Nutricionista · CRN-3 Ativo</span>
       </a>
-      <button class="header__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <button class="header__hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
       <nav class="header__nav" id="nav">
@@ -47,6 +76,7 @@
           <li><a href="#inicio" class="nav-link">Início</a></li>
           <li><a href="#sobre" class="nav-link">Sobre</a></li>
           <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#receitas" class="nav-link">Receitas</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#contato" class="nav-link">Contato</a></li>
         </ul>
@@ -54,7 +84,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- ========== HERO ========== -->
     <section class="hero" id="inicio">
@@ -88,22 +118,25 @@
         </div>
         <div class="hero__photo-wrap">
           <div class="hero__photo-ring"></div>
-          <img src="images/alteia.jpg" alt="Dra. Alteia Semiramis – Nutricionista sorridente em consultório"
-            class="hero__photo" width="480" height="560" loading="eager" />
+          <picture>
+            <source srcset="images/alteia.jpg" type="image/jpg" />
+            <img src="images/alteia.jpg" alt="Dra. Alteia Semiramis – Nutricionista sorridente em consultório"
+              class="hero__photo" width="480" height="560" loading="eager" />
+          </picture>
           <div class="hero__photo-badge">
             <i class="fa-solid fa-leaf"></i>
             <span>Nutrição<br />Comportamental</span>
           </div>
         </div>
       </div>
-      <div class="hero__wave">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
           <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#e9e5cf" />
         </svg>
       </div>
     </section>
 
-    <!-- ========== SOBRE MIM ========== -->
+    <!-- ========== SOBRE ========== -->
     <section class="sobre" id="sobre">
       <div class="container">
         <div class="section-header">
@@ -153,8 +186,8 @@
             <div class="diferencial-card">
               <i class="fa-solid fa-id-card"></i>
               <div>
-                <strong>CRN-3: 12345</strong>
-                <span>Registro ativo no Conselho Regional</span>
+                <strong>CRN-3 Ativo</strong>
+                <span>Registro no Conselho Regional</span>
               </div>
             </div>
           </div>
@@ -162,7 +195,7 @@
       </div>
     </section>
 
-    <!-- ========== ÁREAS DE ATUAÇÃO ========== -->
+    <!-- ========== ÁREAS ========== -->
     <section class="areas" id="areas">
       <div class="container">
         <div class="section-header">
@@ -246,8 +279,7 @@
               A Dra. Alteia mudou minha relação com a comida para sempre."
             </p>
             <div class="depo-card__author">
-              <img src="https://placehold.co/80x80/487f55/ffffff?text=AM" alt="Foto de Ana M." class="depo-card__avatar"
-                width="80" height="80" loading="lazy" />
+              <div class="depo-card__avatar depo-card__avatar--green" aria-hidden="true">AM</div>
               <div>
                 <strong>Ana M.</strong>
                 <span>São Paulo – SP</span>
@@ -262,8 +294,7 @@
               feito sob medida para minha rotina corrida de mãe."
             </p>
             <div class="depo-card__author">
-              <img src="https://placehold.co/80x80/d19d5b/ffffff?text=CS" alt="Foto de Camila S."
-                class="depo-card__avatar" width="80" height="80" loading="lazy" />
+              <div class="depo-card__avatar depo-card__avatar--gold" aria-hidden="true">CS</div>
               <div>
                 <strong>Camila S.</strong>
                 <span>Recife – PE</span>
@@ -278,14 +309,255 @@
               precisava para performar bem sem abrir mão do prazer de comer."
             </p>
             <div class="depo-card__author">
-              <img src="https://placehold.co/80x80/f98088/ffffff?text=RG" alt="Foto de Ricardo G."
-                class="depo-card__avatar" width="80" height="80" loading="lazy" />
+              <div class="depo-card__avatar depo-card__avatar--pink" aria-hidden="true">RG</div>
               <div>
                 <strong>Ricardo G.</strong>
                 <span>Campinas – SP</span>
               </div>
             </div>
           </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RECEITAS ========== -->
+    <section class="receitas" id="receitas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Comer bem é um prazer</span>
+          <h2 class="section-title">Receitas Saudáveis</h2>
+          <p class="section-sub">Opções práticas e nutritivas para o seu dia a dia — criadas por uma nutricionista
+            pensando em você.</p>
+        </div>
+        <div class="receitas__grid">
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#e8f5e9;">
+                <i class="fa-solid fa-sun" style="color:#487f55;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Panqueca de Aveia e Banana</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 15 min
+                  <span class="receita-card__tag">Café da Manhã</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+              <div class="receita-card__col">
+                <h4>Ingredientes</h4>
+                <ul>
+                  <li>1 banana madura amassada</li>
+                  <li>2 colheres (sopa) de aveia em flocos</li>
+                  <li>1 ovo</li>
+                  <li>1 colher (chá) de canela</li>
+                  <li>1 colher (chá) de fermento em pó</li>
+                </ul>
+              </div>
+              <div class="receita-card__col">
+                <h4>Modo de Preparo</h4>
+                <ol>
+                  <li>Misture todos os ingredientes até obter uma massa homogênea.</li>
+                  <li>Aqueça uma frigideira antiaderente em fogo médio.</li>
+                  <li>Despeje porções da massa e doure dos dois lados.</li>
+                  <li>Sirva com mel, frutas ou pasta de amendoim.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#fff3e0;">
+                <i class="fa-solid fa-carrot" style="color:#d19d5b;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Salada de Grão-de-Bico com Abacate</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 20 min
+                  <span class="receita-card__tag receita-card__tag--gold">Almoço</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+                <div class="receita-card__col">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>1 xícara de grão-de-bico cozido</li>
+                    <li>1/2 abacate em cubos</li>
+                    <li>1 tomate picado</li>
+                    <li>1/4 de cebola roxa fatiada</li>
+                    <li>Suco de 1/2 limão</li>
+                    <li>Azeite, sal e pimenta a gosto</li>
+                  </ul>
+                </div>
+                <div class="receita-card__col">
+                  <h4>Modo de Preparo</h4>
+                  <ol>
+                    <li>Misture o grão-de-bico, o tomate e a cebola em uma tigela.</li>
+                    <li>Adicione o abacate e regue com o suco de limão.</li>
+                    <li>Tempere com azeite, sal e pimenta.</li>
+                    <li>Misture delicadamente e sirva em seguida.</li>
+                  </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#e3f2fd;">
+                <i class="fa-solid fa-fish" style="color:#487f55;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Filé de Frango ao Molho de Iogurte</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 30 min
+                  <span class="receita-card__tag">Jantar</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+                <div class="receita-card__col">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>2 filés de frango</li>
+                    <li>1 pote de iogurte natural (170g)</li>
+                    <li>1 dente de alho picado</li>
+                    <li>Suco de 1/2 limão</li>
+                    <li>1 colher (chá) de mostarda</li>
+                    <li>Sal, pimenta e ervas finas a gosto</li>
+                  </ul>
+                </div>
+                <div class="receita-card__col">
+                  <h4>Modo de Preparo</h4>
+                  <ol>
+                    <li>Tempere os filés com alho, limão, sal e pimenta.</li>
+                    <li>Grelhe em frigideira antiaderente até dourar dos dois lados.</li>
+                    <li>Misture o iogurte com a mostarda e as ervas finas.</li>
+                    <li>Sirva o frango regado com o molho e acompanhe com legumes.</li>
+                  </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#fce4ec;">
+                <i class="fa-solid fa-apple-whole" style="color:#f98088;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Chips de Maçã com Canela</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 25 min
+                  <span class="receita-card__tag receita-card__tag--pink">Lanche</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+                <div class="receita-card__col">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>2 maçãs médias</li>
+                    <li>1 colher (chá) de canela em pó</li>
+                    <li>1 colher (sopa) de mel (opcional)</li>
+                  </ul>
+                </div>
+                <div class="receita-card__col">
+                  <h4>Modo de Preparo</h4>
+                  <ol>
+                    <li>Lave as maçãs e corte em fatias finas (com ou sem casca).</li>
+                    <li>Disponha em uma assadeira forrada com papel manteiga.</li>
+                    <li>Polvilhe canela e regue com mel.</li>
+                    <li>Leve ao forno a 180°C por 20-25 min, virando na metade do tempo.</li>
+                    <li>Deixe esfriar para ficarem crocantes.</li>
+                  </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#f3e5f5;">
+                <i class="fa-solid fa-seedling" style="color:#487f55;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Sopa Detox de Abóbora e Gengibre</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 40 min
+                  <span class="receita-card__tag">Jantar</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+                <div class="receita-card__col">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>500g de abóbora picada</li>
+                    <li>1 cenoura média</li>
+                    <li>1 pedaço (2cm) de gengibre</li>
+                    <li>1/2 cebola</li>
+                    <li>1 dente de alho</li>
+                    <li>500ml de caldo de legumes</li>
+                    <li>Sal e cúrcuma a gosto</li>
+                  </ul>
+                </div>
+                <div class="receita-card__col">
+                  <h4>Modo de Preparo</h4>
+                  <ol>
+                    <li>Refogue a cebola e o alho no azeite até dourar.</li>
+                    <li>Adicione a abóbora, a cenoura e o gengibre picados.</li>
+                    <li>Cubra com o caldo de legumes e cozinhe até amaciar.</li>
+                    <li>Bata tudo no liquidificador até ficar cremoso.</li>
+                    <li>Ajuste o sal e sirva com sementes de abóbora.</li>
+                  </ol>
+              </div>
+            </div>
+          </div>
+
+          <div class="receita-card">
+            <div class="receita-card__header" role="button" tabindex="0">
+              <div class="receita-card__thumb" style="background:#fff8e1;">
+                <i class="fa-solid fa-cookie-bite" style="color:#d19d5b;"></i>
+              </div>
+              <div class="receita-card__info">
+                <strong class="receita-card__title">Cookie Fit de Banana e Aveia</strong>
+                <span class="receita-card__meta">
+                  <i class="fa-regular fa-clock"></i> 20 min
+                  <span class="receita-card__tag receita-card__tag--gold">Lanche</span>
+                </span>
+              </div>
+              <i class="fa-solid fa-chevron-down receita-card__icon"></i>
+            </div>
+            <div class="receita-card__body">
+                <div class="receita-card__col">
+                  <h4>Ingredientes</h4>
+                  <ul>
+                    <li>2 bananas maduras amassadas</li>
+                    <li>1 xícara de aveia em flocos</li>
+                    <li>2 colheres (sopa) de pasta de amendoim</li>
+                    <li>1 colher (chá) de canela</li>
+                    <li>3 colheres (sopa) de chocolate 70% picado (opcional)</li>
+                  </ul>
+                </div>
+                <div class="receita-card__col">
+                  <h4>Modo de Preparo</h4>
+                  <ol>
+                    <li>Misture todos os ingredientes em uma tigela até formar uma massa firme.</li>
+                    <li>Modele bolinhas e achate em formato de cookie.</li>
+                    <li>Disponha em assadeira forrada com papel manteiga.</li>
+                    <li>Asse em forno preaquecido a 180°C por 12-15 min.</li>
+                    <li>Deixe esfriar antes de servir.</li>
+                  </ol>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -373,7 +645,7 @@
       </div>
     </section>
 
-    <!-- ========== AGENDAMENTO / CONTATO ========== -->
+    <!-- ========== CONTATO ========== -->
     <section class="contato" id="contato">
       <div class="container">
         <div class="section-header">
@@ -437,8 +709,8 @@
             <div class="info-card">
               <i class="fa-solid fa-clock"></i>
               <div>
-                <strong>Horário de Atendimento</strong>
-                <span>Segunda a Sexta: 8h – 19h<br />Sábados: 9h – 13h</span>
+                <strong>Horário</strong>
+                <span>Seg a Sex: 8h–19h<br />Sáb: 9h–13h</span>
               </div>
             </div>
           </div>
@@ -448,12 +720,12 @@
 
   </main>
 
-  <!-- ========== RODAPÉ ========== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
         <p class="footer__name">Dra. Alteia Semiramis</p>
-        <p class="footer__crn">CRN-3: 12345 · Nutricionista</p>
+        <p class="footer__crn">Nutricionista · CRN-3 Ativo</p>
         <p class="footer__address">
           <i class="fa-solid fa-location-dot"></i>
           São Paulo – SP
@@ -470,6 +742,7 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#areas">Áreas de Atuação</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#receitas">Receitas</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
@@ -479,9 +752,6 @@
         <div class="footer__social-icons">
           <a href="https://www.instagram.com/alteia_semiramis/" target="_blank" rel="noopener" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
           </a>
           <a href="https://wa.me/5511992815036" target="_blank" rel="noopener" aria-label="WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
@@ -494,19 +764,31 @@
       </div>
     </div>
     <div class="footer__bottom">
-      <p>© 2026 Dra. Alteia Semiramis · Todos os direitos reservados · CRN-3: 12345</p>
+      <p>&copy; 2026 Dra. Alteia Semiramis · Todos os direitos reservados · CRN-3 Ativo</p>
     </div>
   </footer>
 
-  <!-- ========== BOTÃO FLUTUANTE WHATSAPP ========== -->
+  <!-- ========== WHATSAPP FLOAT ========== -->
   <a href="https://wa.me/5511992815036?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+as+consultas."
     target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="whatsapp-float__tooltip">Fale comigo!</span>
   </a>
 
+  <!-- ========== LGPD COOKIE CONSENT ========== -->
+  <div id="lgpd-banner" class="lgpd-banner" role="alert" aria-label="Aviso de cookies">
+    <div class="lgpd-banner__inner">
+      <p>
+        <i class="fa-solid fa-cookie-bite"></i>
+        Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você aceita nossa
+        <a href="#" class="lgpd-banner__link">Política de Privacidade</a>.
+      </p>
+      <button id="lgpd-accept" class="btn btn--primary" style="padding:8px 20px;font-size:0.85rem;">Aceitar</button>
+    </div>
+  </div>
+
   <script>
-    // ─── Scroll suave via JS ──────
+    // ─── Scroll suave ──────
     function scrollSuave(id) {
       const destino = document.querySelector(id);
       if (!destino) return;
@@ -515,7 +797,7 @@
         .getPropertyValue('--header-h'));
       const inicio = window.scrollY;
       const alvo = destino.getBoundingClientRect().top + inicio - headerH;
-      const duracao = 700; // ms — aumente para mais lento
+      const duracao = 700;
       let startTime = null;
 
       function easeInOutCubic(t) {
@@ -536,19 +818,25 @@
       link.addEventListener('click', (e) => {
         e.preventDefault();
         scrollSuave(link.getAttribute('href'));
-        // Fecha menu mobile se estiver aberto
         nav.classList.remove('open');
         hamburger.setAttribute('aria-expanded', false);
       });
     });
-    // ─── Hamburger menu ───────────────────────────────────────
+
+    // ─── Hamburger + focus trap ──────
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
+
     hamburger.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       hamburger.setAttribute('aria-expanded', open);
+      if (open) {
+        trapFocus(nav);
+      } else {
+        hamburger.focus();
+      }
     });
-    // Fecha ao clicar num link
+
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('open');
@@ -556,33 +844,66 @@
       });
     });
 
-    // ─── Header scroll shadow ─────────────────────────────────
+    function trapFocus(container) {
+      const focusable = container.querySelectorAll(
+        'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      function handler(e) {
+        if (e.key === 'Tab') {
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+        if (e.key === 'Escape') {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', false);
+          hamburger.focus();
+          container.removeEventListener('keydown', handler);
+        }
+      }
+
+      container.addEventListener('keydown', handler);
+      first.focus();
+    }
+
+    // ─── Header scroll shadow ──────
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
       header.classList.toggle('scrolled', window.scrollY > 40);
     });
 
-    // ─── WhatsApp form button ─────────────────────────────────
+    // ─── Form ──────
     document.getElementById('contato-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const nome = document.getElementById('nome').value.trim();
       const whatsapp = document.getElementById('whatsapp').value.trim();
       const horario = document.getElementById('horario').value || 'não informado';
+      const nomeField = document.getElementById('nome');
+      const whatsappField = document.getElementById('whatsapp');
+
+      [nomeField, whatsappField].forEach(el => el.classList.remove('border-cta'));
 
       if (!nome) {
-        document.getElementById('nome').focus();
-        document.getElementById('nome').style.borderColor = 'var(--color-cta)';
+        nomeField.classList.add('border-cta');
+        nomeField.focus();
         return;
       }
       if (!whatsapp) {
-        document.getElementById('whatsapp').focus();
-        document.getElementById('whatsapp').style.borderColor = 'var(--color-cta)';
+        whatsappField.classList.add('border-cta');
+        whatsappField.focus();
         return;
       }
       const apenasDigitos = whatsapp.replace(/\D/g, '');
       if (apenasDigitos.length < 10 || apenasDigitos.length > 11) {
-        document.getElementById('whatsapp').focus();
-        document.getElementById('whatsapp').style.borderColor = 'var(--color-cta)';
+        whatsappField.classList.add('border-cta');
+        whatsappField.focus();
         return;
       }
 
@@ -590,6 +911,35 @@
         `Olá! Alteia, vim pelo site e gostaria de agendar uma consulta. Meu nome é ${nome} e meu melhor horário é ${horario}.`
       );
       window.open(`https://wa.me/5511992815036?text=${msg}`, '_blank');
+    });
+
+    // ─── Receitas toggle ──────
+    document.querySelectorAll('.receita-card__header').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        const body = card.querySelector('.receita-card__body');
+        card.classList.toggle('is-open');
+        body.style.maxHeight = card.classList.contains('is-open') ? body.scrollHeight + 'px' : '0';
+      });
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          header.click();
+        }
+      });
+    });
+
+    // ─── LGPD banner ──────
+    document.addEventListener('DOMContentLoaded', () => {
+      const banner = document.getElementById('lgpd-banner');
+      const acceptBtn = document.getElementById('lgpd-accept');
+      if (!localStorage.getItem('lgpd-consent')) {
+        banner.style.display = 'block';
+      }
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem('lgpd-consent', 'accepted');
+        banner.style.display = 'none';
+      });
     });
   </script>
 </body>
